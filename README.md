@@ -1,3 +1,7 @@
+# Why this fork
+
+This is my personal fork of scw to version it with portage
+
 # SunCycleWallpaper
 
 A simple Python script to change the wallpaper according to location-based real-time sunrise/sunset data.
@@ -20,9 +24,9 @@ Before getting started, make sure you have the `requests` and `dateutil` modules
 
 ### How things work
 
-By default, everything is installed to `~/.scw`. The installation script will add cron jobs to run the updater every fifth minute of every hour, and at boot, so you should start seeing results pretty soon. The output from every run of the updater is stored at `~/.scw/log.txt`.
+By default, everything is installed to `~/.scw`. The configuration script will add cron jobs to run the updater every fifth minute of every hour, and at boot, so you should start seeing results pretty soon. The output from every run of the updater is stored at `~/.scw/log.txt`.
 
-The configuration data entered during the installation process is formatted as JSON and stored in `~/.scw/config.json`. If you want to change the wallpaper paths or dawn/dusk windows, this is the file to edit.
+The configuration data is formatted as JSON and stored in `~/.scw/config.json`. If you want to change the wallpaper paths or dawn/dusk windows, this is the file to edit.
 
 The updater stores location and sunrise/sunset information in `~/.scw/data.json`. You shouldn't need to touch this file, but it is human-readable, so if weird things are happening and you can't make sense of the log file, check out this file. The `date` field should match your system's date, and the sunrise/sunset times should be stored as UTC timestamps. This data is only updated if the date or location changes, so for most updater runs this file remains unchanged.
 
